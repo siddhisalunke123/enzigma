@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Table, Dropdown, Button } from 'react-bootstrap';
 
-const TaskList = ({ tasks, deleteTask, editTask }) => {
+const TaskList = ({ tasks = [], deleteTask, editTask }) => {  // Set default value for tasks
   const [searchTerm] = useState("");
 
+  // Add a safety check to ensure tasks are filtered properly
   const filteredTasks = tasks.filter((task) =>
-    task.assignedTo.toLowerCase().includes(searchTerm.toLowerCase())
+    task?.assignedTo?.toLowerCase().includes(searchTerm.toLowerCase())  // Use optional chaining
   );
 
   return (
@@ -60,3 +61,5 @@ const TaskList = ({ tasks, deleteTask, editTask }) => {
 };
 
 export default TaskList;
+
+
