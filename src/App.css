@@ -1,0 +1,319 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f5f3f3;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.add-task-form {
+  display: flex;                /* Use flexbox layout */
+  flex-direction: column;      /* Arrange children in a column */
+  align-items: stretch;        /* Stretch items to full width */
+  justify-content: flex-start; /* Start aligning items from the top */
+  margin: auto;                /* Center the form on the page */
+  max-width: 600px;           /* Increase the maximum width */
+  width: 100%;                 /* Allow the form to take full width of the parent */
+  padding: 20px;              /* Add padding inside the form */
+  border: 1px solid #ccc;     /* Optional: add border */
+  border-radius: 8px;         /* Optional: rounded corners */
+  background-color: white;
+}
+
+.form-group {
+  width: 100%;                 /* Full width for input groups */
+  margin-bottom: 15px;        /* Space between groups */
+}
+
+.flex-row {
+  display: flex;               /* Use flexbox for row layout */
+  justify-content: space-between; /* Space between elements */
+}
+
+.flex-item {
+  flex: 1;                    /* Allow items to grow equally */
+  margin-right: 20px;        /* Space between items */
+  min-width: 150px;          /* Set a minimum width to avoid shrinking */
+}
+
+.flex-item:last-child {
+  margin-right: 0;           /* Remove margin from last item */
+}
+
+.add-task-form input,
+.add-task-form select,
+.add-task-form textarea {
+  width: 100%;                 /* Full width for inputs */
+  padding: 10px;              /* Padding for better appearance */
+  border: 1px solid #ccc;     /* Border for inputs */
+  border-radius: 4px;         /* Rounded corners */
+}
+
+textarea {
+  min-height: 100px;          /* Set minimum height for the description textarea */
+}
+
+.button-group {
+  display: flex;               /* Flexbox for button layout */
+  justify-content: center;     /* Center buttons */
+  width: 100%;                 /* Full width for button group */
+}
+
+.button-group button {
+  padding: 10px 20px;         /* Button padding */
+  margin-right: 10px;         /* Space between buttons */
+  border: none;               /* Remove border */
+  border-radius: 4px;        /* Rounded corners */
+  cursor: pointer;            /* Pointer on hover */
+}
+
+.button-group button:last-child {
+  margin-right: 0;            /* Remove margin from last button */
+}
+
+.button-group button:first-child {
+  background-color: #e6f16a; /* Red for Cancel button */
+  color: white;              /* Text color */
+}
+
+.button-group button:last-child {
+  background-color: #83cb85; /* Green for Save button */
+  color: white;              /* Text color */
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack labels and inputs */
+  gap: 5px; /* Space between labels and inputs */
+}
+
+.form-group:nth-of-type(odd) {
+  display: flex; /* Set to flex for odd groups */
+  justify-content: space-between; /* Align items side by side */
+}
+
+.form-group:nth-of-type(odd) input,
+.form-group:nth-of-type(odd) select {
+  width: 48%; /* Adjust width for inline elements */
+}
+
+.form-group {
+  display: flex;         /* Use flexbox for form groups */
+  flex-direction: column; /* Stack label and input vertically */
+}
+
+button {
+  background-color: rgb(246, 244, 242); /* Button background color */
+  color: rgb(93, 74, 220); /* Button text color */
+  padding: 10px; /* Padding inside the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.add-task-form button:hover {
+  background: #a9cdb1;
+}
+
+.form-group {
+  position: relative;
+}
+
+.mandatory {
+  color: red;
+  margin-left: 4px;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.task-item .options {
+  cursor: pointer;
+}
+
+.task-item .options i {
+  margin-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the buttons to the right */
+  width: 100%; /* Ensure the container takes the full width */
+  margin-bottom: 20px; /* Adds some spacing below the buttons */
+}
+
+.new-task-button, .refresh-button {
+  background-color: rgb(234, 192, 113);
+  color: rgb(93, 74, 220);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Adds space between the buttons themselves */
+}
+.search-container {
+  position: relative; /* Needed for absolute positioning of the icon */
+}
+
+.search-bar {
+  width: 300px; /* Adjust width as needed */
+  padding: 10px 30px; /* Add padding to the left for the icon */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Border color */
+}
+
+.search-icon {
+  position: absolute; /* Position the icon */
+  right: 10px; /* Adjust this value for positioning */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the icon */
+  color: #888; /* Icon color */
+  pointer-events: none; /* Prevent clicks on the icon */
+}
+.checklist-button-container {
+  display: flex; /* Align items in a row */
+  align-items: center; /* Vertically center items */
+  padding: 10px; /* Optional padding around the container */
+}
+
+.checklist-button {
+  background-color: red; /* Background color for the button */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding inside the button */
+  cursor: pointer; /* Change cursor on hover */
+  display: flex; /* Use flexbox for aligning icon and text */
+  align-items: center; /* Center icon vertically */
+}
+
+.checklist-button svg {
+  margin-right: 5px; /* Space between icon and text */
+}
+.task-list table {
+  width: 100%;
+  border-collapse: collapse; /* Merge borders */
+}
+
+.task-list th, .task-list td {
+  border: 1px solid #ddd;
+  padding: 10px; /* Space within cells */
+  text-align: left; /* Align text to the left */
+}
+
+.task-list th {
+  background-color: #f2f2f2; /* Header background */
+  color: #333; /* Header text color */
+}
+
+.task-list tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.task-list button {
+  padding: 5px 10px; /* Button padding */
+  margin: 0 5px; /* Space between buttons */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  background-color: #ebece7; /* Button background color */
+  color: rgb(10, 10, 10); /* Button text color */
+}
+
+.task-list button:hover {
+  background-color: #ccd5a7; /* Darker green on hover */
+}
+
+.add-task-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-task-form h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.add-task-form .form-group label {
+  font-weight: bold;
+}
+
+.add-task-form hr {
+  margin: 20px 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-group button {
+  min-width: 100px;
+}
+
+.text-danger {
+  color: red; /* Optional: Bootstrap's .text-danger class */
+}
+
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.modal-content {
+  background-color: red; /* Red background for the modal content */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-actions {
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: white;
+  color: red;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cancel-button {
+  background-color: white;
+  color: red;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
